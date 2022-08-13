@@ -1,0 +1,13 @@
+<?xml version="1.0"?>
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Store:etc/config.xsd">
+    <default>
+        <catalog>
+            <qr>
+                <queue_count>5</queue_count>
+                <code_color>#000000</code_color>
+                <background_color>#ffffff</background_color>
+            </qr>
+        </catalog>
+    </default>
+</config>

@@ -1,0 +1,16 @@
+<?xml version="1.0"?>
+<schema xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:noNamespaceSchemaLocation="urn:magento:framework:Setup/Declaration/Schema/etc/schema.xsd">
+    <table name="qr_code" resource="default" engine="innodb" comment="Save here qr codes to save api limit">
+        <column xsi:type="int" name="entity_id" unsigned="true" nullable="false" identity="true"/>
+        <column xsi:type="int" name="product_id" unsigned="true" nullable="false" identity="false"/>
+        <column xsi:type="int" name="store_id" unsigned="true" nullable="false" identity="false"/>
+        <column xsi:type="longtext" name="qr_code" nullable="false"/>
+        <constraint xsi:type="primary" referenceId="PRIMARY">
+            <column name="entity_id"/>
+        </constraint>
+        <index referenceId="QR_CODE_ENTITY_ID" indexType="btree">
+            <column name="entity_id"/>
+        </index>
+    </table>
+</schema>

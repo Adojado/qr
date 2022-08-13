@@ -1,0 +1,6 @@
+<?php /** @var \Adojado\Qr\Block\Catalog\Product\QrCode $block */ ?>
+
+<?php if ($block->getQrBase64() != ''): ?>
+<img width="150px" height="150px" id='qrCode' alt="qr-code"
+     src='data:image/jpeg;base64, <?= $block->getQrBase64() ?>'/>
+<?php endif; ?>

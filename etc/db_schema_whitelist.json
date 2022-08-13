@@ -1,0 +1,16 @@
+{
+  "qr_code": {
+    "column": {
+      "entity_id": true,
+      "product_id": true,
+      "store_id": true,
+      "qr_code": true
+    },
+    "index": {
+      "QR_CODE_ENTITY_ID": true
+    },
+    "constraint": {
+      "PRIMARY": true
+    }
+  }
+}
