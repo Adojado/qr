@@ -1,0 +1,48 @@
+<?xml version="1.0"?>
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Config:etc/system_file.xsd">
+    <system>
+        <section id="catalog">
+            <group id="qr" translate="label" type="text" sortOrder="120" showInDefault="1" showInWebsite="1"
+                   showInStore="1">
+                <label>Qr code</label>
+                <field id="authorization" translate="label comment" sortOrder="10" type="text" showInDefault="1"
+                       showInWebsite="0" showInStore="0">
+                    <label>Authorization</label>
+                    <comment>
+                        username:password base64 encoded string, you must have account on the
+                        https://www.de-vis-software.ro/qr-code-generator-api.aspx
+                    </comment>
+                </field>
+                <field id="code_color" translate="label comment" sortOrder="20" type="text" showInDefault="1"
+                       showInWebsite="0" showInStore="0" canRestore="1">
+                    <label>Code Color</label>
+                    <comment>
+                        Hex color code for example: #000000
+                    </comment>
+                </field>
+                <field id="background_color" translate="label comment" sortOrder="30" type="text" showInDefault="1"
+                       showInWebsite="0" showInStore="0" canRestore="1">
+                    <label>Background Color</label>
+                    <comment>
+                        Hex color code for example: #FFFFFF
+                    </comment>
+                </field>
+                <field id="logo" translate="label comment" type="Magento\Config\Block\System\Config\Form\Field\File" sortOrder="40" showInDefault="1" showInWebsite="0" showInStore="0" >
+                    <label>Logo image</label>
+                    <backend_model>Adojado\Qr\Model\Config\Backend\File</backend_model>
+                    <upload_dir config="system" scope_info="1">qr</upload_dir>
+                    <comment>
+                        Allowed file extensions: jpg, jpeg, png
+                    </comment>
+                </field>
+                <field id="queue_count" translate="label comment" sortOrder="50" type="text" showInDefault="1"
+                       showInWebsite="0" showInStore="0" canRestore="1">
+                    <label>Default products count in queue</label>
+                    <comment>Not negative number greater than 0.</comment>
+                    <validate>validate-no-empty validate-digits required-entry</validate>
+                </field>
+            </group>
+        </section>
+    </system>
+</config>
