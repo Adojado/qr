@@ -6,11 +6,9 @@
         Put files from repository to 
         <code>MAGENTO_ROOT/app/code/Adojado/Qr</code>
         path.
-        <h3><li>Install via composer</li></h3>
-        Run on your server cmmand 
-        <code>composer require adojado/qr</code>
-    </ul>
-After chose your installation method run magento comile code on your server 
+        <h3><li>Runn Magento commands</li></h3>
+After chose your installation method run magento comile code on your server    
+</ul>
 <br />
 <code>
     php bin/magento setup:upgrade <br />
